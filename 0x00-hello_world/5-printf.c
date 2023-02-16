@@ -4,9 +4,9 @@
  * main - Entry point
  * Return: Always 0 (success)
  */
-
+i
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n")
+	printf("with proper grammar, but the outcome is a piece if art,\n");
 		return(0);
 }
