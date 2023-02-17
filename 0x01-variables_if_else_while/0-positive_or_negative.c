@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 /**
- *  Main -Entry point
- *  This program determines if the value stored in the
- *  variable 'n' is positive or negative
- *  Return: 0
+ * main - Entry point
+ * This program determines if the value stored in the
+ * variable 'n' is positive or negative
+ * Return: 0
+ */
 
 int main(void)
 {
