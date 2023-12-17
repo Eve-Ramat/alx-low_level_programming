@@ -1,18 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - This program prints every letter of the alphabet
- * Return: 0 (Success)
- */
+* main - Entry point
+* Return: 0
+*/
 
 int main(void)
 {
-	int i;
 
-	for (i = 97; i <= 122; i++)
-		putchar(i);
-	for (i = 65; i < 91; i++)
-		putchar(i);
-	putchar('\n');
+int alphabets;
+
+	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
+	{
+	putchar(alphabets);
+	}
+	for (alphabets = 'A'; alphabets <= 'Z'; alphabets++)
+	{
+	putchar(alphabets);
+	}
+	putchar('\n);
 	return (0);
 }
