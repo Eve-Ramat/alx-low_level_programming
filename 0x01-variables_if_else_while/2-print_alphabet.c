@@ -1,16 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - This program prints every letter of the alphabet in lowercase
- * Return: 0 (Success)
- */
+* main - Entry point
+* Return: 0
+*/
 
 int main(void)
 {
-	int i;
+	int alphabets;
 
-	for (i = 97; i <= 122; i++)
-		putchar(i);
+	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
+	{
+		putchar(alphabets);
+	}
 	putchar('\n');
 	return (0);
 }
