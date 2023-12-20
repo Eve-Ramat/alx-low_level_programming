@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Entry point
+* Return: 0
+*/
+
 int main(void)
 {
 	int firstDigit, secondDigit;
@@ -13,18 +13,18 @@ int main(void)
 	{
 		for (secondDigit = firstDigit + 1; secondDigit <= 9; secondDigit++)
 		{
-			putchar(firstDigit + '0');  /* Convert digit to character */
-			putchar(secondDigit + '0'); /* Convert digit to character */
+			putchar(firstDigit + '0');
+			putchar(secondDigit + '0');
 
-			if (firstDigit != 8 || secondDigit != 9) /* Checks for last combination */
+			if (firstDigit != 8 || secondDigit != 9)
 			{
-				putchar(',');  /* Print comma */
-				putchar(' ');  /* Print space */
+				putchar(',');
+				putchar(' ');
 			}
 		}
-	}
-	putchar('\n'); /* Print new line at the end */
 
-	return (0);
+		putchar('\n');
+		return (0);
+	}
 }
 
