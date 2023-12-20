@@ -1,37 +1,30 @@
 #include <stdio.h>
 
 /**
- *main - prints numbers from 00 to 89
- *Return: 0 if (successful)
-*/
-
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int i, j;
+	int firstDigit, secondDigit;
 
-	i = 48;
-	j = 48;
-
-	while (i < 58)
+	for (firstDigit = 0; firstDigit <= 8; firstDigit++)
 	{
-		j = i + 1;
-		while (j < 58)
+		for (secondDigit = firstDigit + 1; secondDigit <= 9; secondDigit++)
 		{
-			putchar(i);
-			putchar(j);
+			putchar(firstDigit + '0');  /* Convert digit to character */
+			putchar(secondDigit + '0'); /* Convert digit to character */
 
-			if (i < 56 || j < 57)
+			if (firstDigit != 8 || secondDigit != 9) /* Checks for last combination */
 			{
-				putchar(44);
-				putchar(32);
+				putchar(',');  /* Print comma */
+				putchar(' ');  /* Print space */
 			}
-			j++;
 		}
-
-		i++;
 	}
-
-	putchar(10);
+	putchar('\n'); /* Print new line at the end */
 
 	return (0);
 }
+
