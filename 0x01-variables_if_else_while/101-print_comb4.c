@@ -1,46 +1,45 @@
 #include <stdio.h>
 
 /**
- * main - prints possible outcomes of three digits
- * Return: 0 if successful
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i;  /* Declare i outside the loop */
+	int i;
 
-	i = 48;  /* Initialize i to ASCII value of '0' */
+	i = 48;
 
-	while (i <= 55)  /* Loop for values from '0' to '7' */
+	while (i <= 55)
 	{
-		int j = i + 1;  /* Declare and initialize j to the next value of i */
+		int j = i + 1;
 
-		while (j <= 56)  /* Loop for values from j to '8' */
+		while (j <= 56)
 		{
-			int k = j + 1;  /* Declare and initialize k to the next value of j */
+			int k = j + 1;
 
-			while (k <= 57)  /* Loop for values from k to '9' */
+			while (k <= 57)
 			{
-				putchar(i);  /* Print the character for i */
-				putchar(j);  /* Print the character for j */
-				putchar(k);  /* Print the character for k */
+				putchar(i);
+				putchar(j);
+				putchar(k);
 
-				/* Check if it's not the last combination to print comma and space */
-				if (i <= 54 || j <= 55 || k <= 56)
+				if (i != 55 || j != 56 || k != 58)
 				{
-					putchar(44);  /* Print comma */
-					putchar(32);  /* Print space */
+					putchar(44);
+					putchar(32);
 				}
 
-				k++;  /* Move to the next k value */
+				k++;
 			}
-			j++;  /* Move to the next j value */
+			j++;
 		}
-		i++;  /* Move to the next i value */
+		i++;
 	}
 
-	putchar(10);  /* Print a newline character */
+	putchar(10); /* Print a newline */
 
-	return (0);  /* Return 0 to indicate successful execution */
+	return (0);
 }
 
