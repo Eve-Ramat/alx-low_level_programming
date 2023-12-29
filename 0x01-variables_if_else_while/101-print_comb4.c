@@ -1,45 +1,46 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Entry point
+* Return: 0
+*/
+
 int main(void)
 {
-	int i;
 
-	i = 48;
+	int firstDigit = 48, secondDigit, thirdDigit;
 
-	while (i <= 55)
+	while (firstDigit <= 55)
 	{
-		int j = i + 1;
+		secondDigit = firstDigit + 1;
 
-		while (j <= 56)
+		while (secondDigit <= 56)
 		{
-			int k = j + 1;
+			thirdDigit = secondDigit + 1;
 
-			while (k <= 57)
+			while (thirdDigit <= 57)
 			{
-				putchar(i);
-				putchar(j);
-				putchar(k);
+				putchar(firstDigit);
+				putchar(secondDigit);
+				putchar(thirdDigit);
 
-				if (i != 55 || j != 56 || k != 57)
+				if (firstDigit != 55 || secondDigit != 56 || thirdDigit != 57)
 				{
 					putchar(44);
 					putchar(32);
 				}
 
-				k++;
+				thirdDigit++;
 			}
-			j++;
+
+			secondDigit++;
+
 		}
-		i++;
+
+		firstDigit++;
 	}
 
-	putchar(10); /* Print a newline */
+	putchar(10);
 
 	return (0);
 }
-
