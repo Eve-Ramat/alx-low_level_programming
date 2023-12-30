@@ -7,40 +7,30 @@
 
 int main(void)
 {
+	int firstDigit, secondDigit, thirdDigit;
 
-	int firstDigit = 48, secondDigit, thirdDigit;
-
-	while (firstDigit <= 55)
+	for (firstDigit = 0; firstDigit <= 7; firstDigit++)
 	{
-		secondDigit = firstDigit + 1;
-
-		while (secondDigit <= 56)
+		for (secondDigit = firstDigit + 1; secondDigit <= 8; secondDigit++)
 		{
-			thirdDigit = secondDigit + 1;
-
-			while (thirdDigit <= 57)
+			for (thirdDigit = firstDigit + 2; thirdDigit <= 9; thirdDigit++)
 			{
-				putchar(firstDigit);
-				putchar(secondDigit);
-				putchar(thirdDigit);
+				putchar(firstDigit + '0');
+				putchar(secondDigit + '0');
+				putchar(thirdDigit + '0');
 
-				if (firstDigit != 55 || secondDigit != 56 || thirdDigit != 57)
+				if (firstDigit != 7 || secondDigit != 8 || thirdDigit != 9)
 				{
 					putchar(44);
 					putchar(32);
 				}
-
-				thirdDigit++;
 			}
-
-			secondDigit++;
-
 		}
-
-		firstDigit++;
 	}
 
 	putchar(10);
 
 	return (0);
 }
+
+
