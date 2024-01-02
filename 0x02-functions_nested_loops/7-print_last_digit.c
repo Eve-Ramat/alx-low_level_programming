@@ -6,15 +6,24 @@
  *
  * Return: Value of the last digit.
  */
-
 int print_last_digit(int number)
 {
 	int last_digit;
 
+	/* Check if the number is negative */
 	if (number < 0)
+	{
+		/* If negative, find the positive equivalent by adding the absolute value */
+		number = number + (-2 * number);
+	}
 
-		last_digit = (-1 * (number % 10));
+	/* Find the last digit (which will be the remainder when divided by 10) */
+	last_digit = number % 10;
 
+	/* Print the last digit */
 	_putchar('0' + last_digit);
+
+	/* Return the last digit */
 	return (last_digit);
 }
+
