@@ -10,13 +10,13 @@ int print_last_digit(int number)
 {
 	int last_digit;
 
-	/* Use bitwise operations to make negative numbers positive */
+	/* If number is negative, convert it to positive using absolute value */
 	if (number < 0)
 	{
-		number = ~number + 1; /* Two's complement */
+		number = abs(number);
 	}
 
-	/* Find the last digit (which will be the remainder when divided by 10) */
+	/* Calculate the last digit by finding the remainder when divided by 10 */
 	last_digit = number % 10;
 
 	/* Print the last digit */
