@@ -10,15 +10,8 @@ int print_last_digit(int number)
 {
 	int last_digit;
 
-	/* Check if the number is negative */
-	if (number < 0)
-	{
-		/* Make the number positive by adding 1 and then negating */
-		number = -number;
-	}
-
 	/* Calculate the last digit by finding the remainder when divided by 10 */
-	last_digit = number % 10;
+	last_digit = ((number % 10) * -1);
 
 	/* Print the last digit */
 	_putchar('0' + last_digit);
