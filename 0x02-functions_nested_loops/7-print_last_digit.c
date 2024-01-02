@@ -10,10 +10,11 @@ int print_last_digit(int number)
 {
 	int last_digit;
 
-	/* If number is negative, convert it to positive using absolute value */
+	/* Check if the number is negative */
 	if (number < 0)
 	{
-		number = abs(number);
+		/* Make the number positive by adding 1 and then negating */
+		number = (1 + (~number));
 	}
 
 	/* Calculate the last digit by finding the remainder when divided by 10 */
