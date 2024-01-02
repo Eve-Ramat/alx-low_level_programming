@@ -10,13 +10,16 @@ int print_last_digit(int number)
 {
 	int last_digit;
 
-	/* Calculate the last digit by finding the remainder when divided by 10 */
-	last_digit = ((number % 10) * -1);
-
-	/* Print the last digit */
-	_putchar('0' + last_digit);
-
-	/* Return the last digit */
-	return (last_digit);
+	if (number < 0)
+	{
+		last_digit = ((number % 10) * -1);
+		_putchar('0' + last_digit);
+		return (last_digit);
+	}
+	else if (number >= 0)
+	{
+		last_digit = number % 10;
+		_putchar('0' + last_digit);
+		return (last_digit);
+	}
 }
-
