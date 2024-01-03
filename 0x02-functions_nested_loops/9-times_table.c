@@ -1,36 +1,40 @@
 #include "main.h"
+
 /**
- * times_table - prints the times table from 0 - 9.
- *
- * Return: Nothing.
+ * times_table - Prints the 9 times table, starting with 0.
  */
 void times_table(void)
 {
-	int i, j, res;
+	int row, column, product;
 
-	for (i = 0; i <= 9; i++)
+	for (row = 0; row <= 9; row++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (column = 0; column <= 9; column++)
 		{
-			res = (i * j);
-			if (j != 0)
+			product = row * column;
+
+			if (column != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-			if (res >= 10)
+
+			if (product >= 10)
 			{
-				_putchar((res / 10) + '0');
-				_putchar((res % 10) + '0');
+				_putchar((product / 10) + '0');
+				_putchar((product % 10) + '0');
 			}
-			else if (res < 10 && j != 0)
+			else if (product < 10 && column != 0)
 			{
 				_putchar(' ');
-				_putchar((res % 10) + '0');
+				_putchar((product % 10) + '0');
 			}
 			else
-				_putchar((res % 10) + '0');
+			{
+				_putchar(product + '0');
+			}
 		}
 		_putchar('\n');
 	}
 }
+
