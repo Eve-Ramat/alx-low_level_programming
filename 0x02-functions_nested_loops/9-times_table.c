@@ -11,29 +11,18 @@ void times_table(void)
 	{
 		for (column = 0; column <= 9; column++)
 		{
+			column != 0 ? (_putchar(','), _putchar(32)) : 0;
+
 			product = row * column;
 
-			if (column != 0)
-{
-				_putchar(',');
-				_putchar(' ');
-			}
-
-			if (product >= 10)
-			{
-				_putchar((product / 10) + '0');
-				_putchar((product % 10) + '0');
-			}
-			else if (product < 10 && column != 0)
-{
-				_putchar(' ');
-				_putchar(product + '0');
-			}
-			else
-			{
-				_putchar(product + '0');
-			}
+			product >= 10 ?
+				(_putchar((product / 10) + '0'), _putchar((product % 10) + '0')) :
+				(product < 10 && column != 0 ?
+					(_putchar(32), _putchar(product + '0')) :
+					_putchar(product + '0')
+				);
 		}
-		_putchar('\n');
+		_putchar(10);
 	}
 }
+
