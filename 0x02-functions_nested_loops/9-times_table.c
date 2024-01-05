@@ -17,10 +17,9 @@ void times_table(void)
 
 			product >= 10 ?
 				(_putchar((product / 10) + '0'), _putchar((product % 10) + '0')) :
-				(product < 10 && column != 0 ?
+				(product < 10 && column != 0) ?
 					(_putchar(32), _putchar(product + '0')) :
-					_putchar(product + '0')
-				);
+					_putchar(product + '0');
 		}
 		_putchar(10);
 	}
