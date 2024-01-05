@@ -13,7 +13,7 @@ void times_table(void)
 		{
 			product = row * column;
 
-			if (column != 0 && product <= 81)
+			if (column != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -22,6 +22,11 @@ void times_table(void)
 			if (product >= 10)
 			{
 				_putchar((product / 10) + '0');
+				_putchar((product % 10) + '0');
+			}
+			else if (product < 10 && column != 0)
+			{
+				_putchar(' ');
 				_putchar((product % 10) + '0');
 			}
 			else
