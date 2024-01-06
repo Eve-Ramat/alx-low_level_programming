@@ -9,40 +9,40 @@ void print_times_table(int n)
 	if (n < 0 || n > 15)
 		return;
 
-	for (int row = 0; row <= n; row++)
+	int column, row;
+
+	for (column = 0; column <= n; column++)
 	{
-		for (int col = 0; col <= n; col++)
+		for (row = 0; row <= n; row++)
 		{
-			int product = row * col;
+			int product = column * row;
+
+			if (row != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				if (product <= 9)
+					_putchar(' ');
+			}
 
 			if (product > 99)
 			{
 				_putchar(product / 100 + '0');
 				_putchar((product / 10 % 10) + '0');
-				_putchar(product % 10 + '0');
 			}
 			else if (product > 9)
 			{
 				_putchar(' ');
 				_putchar(product / 10 + '0');
-				_putchar(product % 10 + '0');
-			}
-			else if (col != 0)
-			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(product + '0');
 			}
 			else
 			{
-				_putchar(product + '0');
+				if (row != 0)
+					_putchar(' ');
 			}
 
-			if (col != n)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			_putchar(product % 10 + '0');
 		}
 		_putchar('\n');
 	}
