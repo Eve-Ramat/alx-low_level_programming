@@ -6,18 +6,18 @@
  */
 void print_times_table(int n)
 {
-	int row, column;
+	int column, row;
 
 	if (n < 0 || n > 15)
 		return;
 
-	for (row = 0; row <= n; row++)
+	for (column = 0; column <= n; column++)
 	{
-		for (column = 0; column <= n; column++)
+		for (row = 0; row <= n; row++)
 		{
-			int product = row * column;
+			int product = column * row;
 
-			if (column != 0)
+			if (row != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -38,7 +38,7 @@ void print_times_table(int n)
 			}
 			else
 			{
-				if (column != 0)
+				if (row != 0)
 					_putchar(' ');
 			}
 
