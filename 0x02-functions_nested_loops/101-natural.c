@@ -8,14 +8,14 @@
 
 int main(void)
 {
-	int sum_of_multiples = 0, number1023;
+	int sum_of_multiples_of_3_and_5 = 0, number1023;
 
 	for (number1023 = 0; number1023 <= 1023; number1023++)
 	{
 		if (number1023 % 3 == 0 || number1023 % 5 == 0)
-			sum_of_multiples += number1023;
+			sum_of_multiples_of_3_and_5 += number1023;
 	}
 
-	printf("%d\n", sum_of_multiples);
+	printf("%d\n", sum_of_multiples_of_3_and_5);
 	return (0);
 }
