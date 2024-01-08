@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	int sum_of_multiples = 0, numbers_1023;
+	int sum_of_multiples = 0, number1023;
 
-	for (numbers_1023 = 0; numbers_1023 <= 1023; numbers_1023++)
+	for (number1023 = 0; number1023 <= 1023; number1023++)
 	{
-		if (numbers_1023 % 3 == 0 || numbers_1023 % 5 == 0)
-			sum_of_multiples += numbers_1023;
+		if (number1023 % 3 == 0 || number1023 % 5 == 0)
+			sum_of_multiples += number1023;
 	}
 
 	printf("%d\n", sum_of_multiples);

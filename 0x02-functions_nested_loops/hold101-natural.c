@@ -14,9 +14,8 @@ int main(void)
 	{
 		if (numbers_1023 % 3 == 0 || numbers_1023 % 5 == 0)
 			sum_of_multiples += numbers_1023;
-
-		printf("The some of the multiples of 3 and 5 is: %d\n", sum_of_multiples);
 	}
 
+	printf("%d\n", sum_of_multiples);
 	return (0);
 }
