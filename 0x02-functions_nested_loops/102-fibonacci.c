@@ -17,7 +17,7 @@ int main(void)
 		printf("%d", k);
 
 		if (count < 50)
-			putchar(',');
+			putchar(44);
 		else
 			putchar(10);
 	}
