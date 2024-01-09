@@ -6,7 +6,8 @@
 
 int main(void)
 {
-	int count, i = 0, j = 1, k;
+	int count;
+	long  i = 0, j = 1, k;
 
 	for (count = 1; count <= 50; count++)
 	{
@@ -14,7 +15,7 @@ int main(void)
 		i = j;
 		j = k;
 
-		printf("%d", k);
+		printf("%ld", k);
 
 		if (count < 50)
 			printf(", ");
