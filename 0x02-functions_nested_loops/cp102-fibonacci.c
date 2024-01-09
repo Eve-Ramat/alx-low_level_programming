@@ -3,24 +3,25 @@
   * main - print the first 50 fibonacci numbers.
   * Return: Nothing.
   */
-
 int main(void)
 {
-	int count, i = 0, j = 1, k;
+	unsigned long count, i, j, k;
 
-	for (count = 1; count <= 50; count++)
+	i = 0;
+	j = 1;
+
+	for (count = 0; count < 50; count++)
 	{
 		k = i + j;
 		i = j;
 		j = k;
-
-		printf("%d", k);
-
-		if (count < 50)
-			putchar(',');
+		printf("%lu", k);
+		if (count == 49)
+			putchar('\n');
 		else
-			putchar(10);
+		{
+			printf(", ");
+		}
 	}
-
 	return (0);
 }
