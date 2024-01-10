@@ -12,6 +12,7 @@ int main(void)
 	int count;
 
 	i = sum = 0;
+	j = 1;
 
 	for (count = 1; count <= 50; count++)
 	{
@@ -19,7 +20,7 @@ int main(void)
 		k = j + i;
 		j = k;
 
-		if (k % 2 && k <= 4000000)
+		if (k % 2 == 0 && k <= 4000000)
 			sum += k;
 	}
 
