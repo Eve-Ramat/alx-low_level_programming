@@ -16,8 +16,8 @@ int main(void)
 
 	for (count = 1; count <= 50; count++)
 	{
-		i = j;
 		k = j + i;
+		i = j;
 		j = k;
 
 		if (k % 2 == 0 && k <= 4000000)
