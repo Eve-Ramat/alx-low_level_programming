@@ -17,7 +17,7 @@ int main(void)
 
 		printf("%ld", k);
 
-		if (count != 50)
+		if (count < 50)
 			printf(", ");
 		else
 			putchar(10);
