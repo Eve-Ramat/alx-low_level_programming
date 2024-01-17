@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * more_numbers - function that prints from 0 to 14, 10 times.
+ * followed by a new line.
+ */
+
 void more_numbers(void)
 {
 	int iteration, current_number;
