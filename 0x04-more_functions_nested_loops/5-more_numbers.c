@@ -1,9 +1,5 @@
 #include "main.h"
 
-/**
- * more_numbers - function that prints from 0 to 14, 10 times.
- * followed by a new line.
- */
 void more_numbers(void)
 {
 	int iteration, current_number;
@@ -15,9 +11,10 @@ void more_numbers(void)
 			if (current_number >= 10)
 			{
 				_putchar((current_number / 10) + '0');
-				_putchar((current_number % 10) + '0');
 			}
+			_putchar((current_number % 10) + '0');
 		}
+
 		_putchar('\n');
 	}
 }
