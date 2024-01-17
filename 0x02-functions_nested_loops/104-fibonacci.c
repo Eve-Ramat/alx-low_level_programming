@@ -18,7 +18,7 @@ int main(void)
 		k = i + j;
 		i = j;
 		j = k;
-		printf("%.0Le, ", k);
+		printf("%.0Lf, ", k);
 	}
 
 	return (0);
