@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - print the first 98 Fibonacci numbers without decimal places.
@@ -18,7 +19,7 @@ int main(void)
 		k = i + j;
 		i = j;
 		j = k;
-		printf("%.0Lf, ", k);
+		printf("%.0Lf, ", round(k));
 	}
 
 	return (0);
