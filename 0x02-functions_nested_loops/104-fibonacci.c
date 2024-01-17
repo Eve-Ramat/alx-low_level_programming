@@ -7,7 +7,8 @@
 int main(void)
 {
 	int count;
-	double i, j, k;
+
+	long double i, j, k;
 
 	i = 0;
 	j = 1;
@@ -17,7 +18,7 @@ int main(void)
 		k = i + j;
 		i = j;
 		j = k;
-		printf("%.0f, ", k);
+		printf("%.0Lf, ", k);
 	}
 
 	return (0);
