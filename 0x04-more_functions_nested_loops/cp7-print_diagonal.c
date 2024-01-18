@@ -14,22 +14,17 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		int spaces = 0;
+		int i, spaces;
 
-		while (spaces < n)
+		for (i = 0; i < n; i++)
 		{
-			int slashes = 0;
-
-			while (slashes < spaces)
+			for (spaces = 0; spaces < i; spaces++)
 			{
 				_putchar(' ');
-				slashes++;
 			}
-
 			_putchar('\\');
 			_putchar('\n');
-
-			spaces++;
 		}
 	}
 }
+
