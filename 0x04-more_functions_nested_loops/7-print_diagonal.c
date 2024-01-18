@@ -21,7 +21,7 @@ void print_diagonal(int n)
 		{
 			for (spaces = 0; spaces < slashes; spaces++)
 			{
-				_putchar('\t');
+				_putchar(32);
 			}
 
 			_putchar('\\');
