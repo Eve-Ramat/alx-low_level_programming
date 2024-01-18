@@ -14,11 +14,9 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		int slashes, spaces;
-
-		for (slashes = 1; slashes <= n; slashes++)
+		for (int slashes = 0; slashes < n; slashes++)
 		{
-			for (spaces = 1; spaces <= slashes; spaces++)
+			for (int spaces = 0; spaces < slashes; spaces++)
 			{
 				_putchar(32);
 			}
