@@ -14,11 +14,11 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		int slashes = 1, spaces;
+		int slashes, spaces;
 
 		for (slashes = 1; slashes <= n; slashes++)
 		{
-			for (spaces = 1; spaces < slashes; spaces++)
+			for (spaces = 1; spaces <= slashes; spaces++)
 			{
 				_putchar(32);
 			}
