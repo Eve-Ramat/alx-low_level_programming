@@ -1,18 +1,19 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-* Return: 0
-*/
+ * main - Entry point
+ * Return: 0
+ */
 
 int main(void)
-{
-	int alphabets;
-
-	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
 	{
-		putchar(alphabets);
+		char low = 'a';
+
+		while (low <= 'z')
+		{
+			putchar(low);
+			low++;
+		}
+		putchar('\n');
+		return (0);
 	}
-	putchar('\n');
-	return (0);
-}
