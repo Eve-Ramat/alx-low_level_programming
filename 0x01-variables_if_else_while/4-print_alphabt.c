@@ -1,23 +1,23 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-* Return: 0
-*/
+ * main - Entry point
+ * Return: 0
+ */
 
 int main(void)
 {
-	int letter;
+	char low = 'a';
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	while (low <= 'z')
 	{
-		if (letter != 'e' && letter != 'q')
+		if (low != 'e' && low != 'q')
 		{
-			putchar(letter);
+			putchar(low);
 		}
+		low++;
 	}
-		putchar('\n');
-
-		return (0);
-
+	putchar('\n');
+	return (0);
 }
+
