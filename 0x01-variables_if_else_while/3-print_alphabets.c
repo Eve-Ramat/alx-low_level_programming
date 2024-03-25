@@ -1,22 +1,25 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-* Return: 0
-*/
+ * main - Entry point
+ * Return: 0
+ */
 
 int main(void)
 {
+	char alpha = 'a';
+	char ALPHA = 'A';
 
-int alphabets;
-
-	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
+	while (alpha <= 'z')
 	{
-	putchar(alphabets);
+		putchar(alpha);
+		alpha++;
 	}
-	for (alphabets = 'A'; alphabets <= 'Z'; alphabets++)
+
+	while (ALPHA <= 'Z')
 	{
-	putchar(alphabets);
+		putchar(ALPHA);
+		ALPHA++;
 	}
 	putchar('\n');
 	return (0);
