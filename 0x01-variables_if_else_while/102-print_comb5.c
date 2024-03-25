@@ -15,11 +15,11 @@ int main(void)
 
 		while (secondCombination <= 99)
 		{
-			putchar(firstCombination / 10);
-			putchar(firstCombination % 10);
+			putchar((firstCombination / 10) + '0');
+			putchar((firstCombination % 10) + '0');
 			putchar(32);
-			putchar(secondCombination / 10);
-			putchar(secondCombination % 10);
+			putchar((secondCombination / 10) + '0');
+			putchar((secondCombination % 10) + '0');
 
 			if (firstCombination < 98)
 			{
