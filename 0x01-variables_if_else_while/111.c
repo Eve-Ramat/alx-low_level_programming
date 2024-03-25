@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry Point
- * Return: 0
- */
+* main - Entry point
+* Return: 0
+*/
 
 int main(void)
 {
@@ -15,13 +15,14 @@ int main(void)
 		{
 			putchar(firstDigit + '0');
 			putchar(secondDigit + '0');
-
-			if (firstDigit < 8)
+			if (firstDigit != 8 || secondDigit != 9)
 			{
+
 				putchar(',');
 				putchar(' ');
 			}
 		}
+
 	}
 	putchar('\n');
 	return (0);
