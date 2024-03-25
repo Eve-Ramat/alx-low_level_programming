@@ -1,3 +1,5 @@
+.gitignore
+100-copy.c
 4.c
 100-print_comb3former.c
 100-print_comb32.c
