@@ -9,11 +9,11 @@ int main(void)
 {
 	int firstCombination = 0, secondCombination;
 
-	while (firstCombination <= '98')
+	while (firstCombination <= 98)
 	{
 		secondCombination = firstCombination + 1;
 
-		while (secondCombination <= '99')
+		while (secondCombination <= 99)
 		{
 			putchar(firstCombination / 10);
 			putchar(firstCombination % 10);
