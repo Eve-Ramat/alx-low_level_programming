@@ -21,7 +21,7 @@ int main(void)
 			putchar((secondCombination / 10) + '0');
 			putchar((secondCombination % 10) + '0');
 
-			if (firstCombination != 98 || secondCombination != 99)
+			if (firstCombination < 98)
 			{
 				putchar(44);
 				putchar(32);
