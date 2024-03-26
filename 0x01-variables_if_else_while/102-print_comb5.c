@@ -28,7 +28,7 @@ putchar(32);
 }
 secondCombi++;
 }
-secondCombi++;
+firstCombi++;
 }
 putchar(10);
 return (0);
