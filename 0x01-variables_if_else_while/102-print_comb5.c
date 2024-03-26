@@ -9,9 +9,11 @@ int main(void)
 {
 int firstCombi, secondCombi;
 
-for (firstCombi = 0; firstCombi <= 98; firstCombi++)
+while (firstCombi <= 98)
 {
-for (secondCombi = firstCombi + 1; secondCombi <= 99; secondCombi++)
+secondCombi = firstCombi + 1;
+
+while (secondCombi <= 99)
 {
 putchar((firstCombi / 10) + '0');
 putchar((firstCombi % 10) + '0');
@@ -23,7 +25,6 @@ if (firstCombi < 98)
 {
 putchar(44);
 putchar(32);
-}
 }
 }
 putchar(10);
