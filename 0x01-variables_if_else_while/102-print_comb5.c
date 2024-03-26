@@ -1,39 +1,31 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-* Return: 0
-*/
+ * main - Entry point
+ * Return: 0
+ */
 
 int main(void)
 {
-	int firstCombination = 0, secondCombination;
+int firstCombi, secondCombi;
 
-	while (firstCombination <= 98)
-	{
-		secondCombination = firstCombination + 1;
+for (firstCombi = 0; firstCombi <= 98; firstCombi++)
+{
+for (secondCombi = firstCombi + 1; secondCombi <= 99; secondCombi++)
+{
+putchar((firstCombi / 10) + '0');
+putchar((firstCombi % 10) + '0');
+putchar(32);
+putchar((secondCombi / 10) + '0');
+putchar((secondCombi  % 10) + '0');
 
-		while (secondCombination <= 99)
-		{
-			putchar((firstCombination / 10) + '0');
-			putchar((firstCombination % 10) + '0');
-			putchar(32);
-			putchar((secondCombination / 10) + '0');
-			putchar((secondCombination % 10) + '0');
-
-			if (firstCombination < 98)
-			{
-				putchar(44);
-				putchar(32);
-			}
-
-			secondCombination++;
-		}
-
-		firstCombination++;
-	}
-
-	putchar(10);
-
-	return (0);
+if (firstCombi < 98)
+{
+putchar(44);
+putchar(32);
+}
+}
+}
+putchar(10);
+return (0);
 }
