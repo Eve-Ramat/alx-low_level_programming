@@ -26,7 +26,9 @@ if (firstCombi < 98)
 putchar(44);
 putchar(32);
 }
+secondCombi++;
 }
+secondCombi++;
 }
 putchar(10);
 return (0);
