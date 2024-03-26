@@ -7,7 +7,7 @@
 
 int main(void)
 {
-int firstCombi, secondCombi;
+int firstCombi = 0, secondCombi;
 
 while (firstCombi <= 98)
 {
