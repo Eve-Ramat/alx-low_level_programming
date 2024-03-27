@@ -10,10 +10,10 @@
 int print_sign(int n)
 {
 	if (n > 0)	/* Check if n is positive */
-		return (_putchar('+'), 1);
+		return (1, _putchar('+'));
 	else if (n == 0)	/* Check if n is zero */
-		return (_putchar('0'), 0);
+		return (0, _putchar(48));
 	else	/* If n is negative */
-		return (_putchar('-'), -1);
+		return (-1, _putchar('-'));
 }
 
