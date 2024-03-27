@@ -9,6 +9,6 @@
 int print_sign(int n)
 {
 	return (n > 0 ? (_putchar('+') && 1) :
-	(n == 0 ? (_putchar(48) && 48) :
+	(n == 0 ? (_putchar(48) && 0) :
 	(_putchar('-') && -1)));
 }
