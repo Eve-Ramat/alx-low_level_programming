@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- *main - prints _putchar followed by a new line
- *Return: Always 0 (Success)
+ * main - Entry point
+ * Return: 0
  */
 
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar(10);
+	char myArray[] = "_putchar\n";
+	int index = 0;
+
+	while (myArray[index] != '\0')
+	{
+		_putchar(myArray[index]);
+		index++;
+	}
 	return (0);
 }
