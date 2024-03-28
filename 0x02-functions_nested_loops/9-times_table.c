@@ -14,13 +14,13 @@ void times_table(void)
 		{
 			product = row * column;
 
-			if (product >= 0)
+			if (column != 0)
 			{
 				_putchar(44);
 				_putchar(32);
 			}
 
-			if (product <= 9)
+			if (column != 0 && product <= 9)
 			{
 				_putchar(32);
 				_putchar(product + 48);
@@ -29,6 +29,10 @@ void times_table(void)
 			{
 				_putchar((product / 10) + 48);
 				_putchar((product % 10) + 48);
+			}
+			else
+			{
+				_putchar(product + '0');
 			}
 		}
 
