@@ -9,16 +9,15 @@ void print_to_98(int n)
 	while (n < 0)
 	{
 		_putchar('-');
-		n > -10 ? (_putchar(-n + '0')) :
-			(_putchar(n / 10 * -1 + '0'), _putchar(n % 10 * -1 + '0'));
-		n < 98 ? (_putchar(','), _putchar(' ')) : 0;
+		n > -10 ? (_putchar(-n + '0')) : (_putchar(n / 10 * -1 + '0'), _putchar(n % 10 * -1 + '0'));
+		n != 98 ? (_putchar(','), _putchar(' ')) : 0;
 		n++;
 	}
 
 	while (n <= 98 && n <= 9)
 	{
 		_putchar(n + '0');
-		n < 98 ? (_putchar(','), _putchar(' ')) : 0;
+		n != 98 ? (_putchar(','), _putchar(' ')) : 0;
 		n++;
 	}
 
@@ -26,17 +25,14 @@ void print_to_98(int n)
 	{
 		_putchar((n / 10) + '0');
 		_putchar((n % 10) + '0');
-		n < 98 ? (_putchar(','), _putchar(' ')) : 0;
+		n != 98 ? (_putchar(','), _putchar(' ')) : 0;
 		n++;
 	}
 
-	while (n >= 98)
+	if (n == 98)
 	{
-		n > 99 ? (_putchar((n / 100) + '0'), _putchar((n / 10 % 10) + '0'),
-			_putchar((n % 10) + '0')) :
-			(_putchar((n / 10) + '0'), _putchar((n % 10) + '0'));
-		n > 98 ? (_putchar(','), _putchar(' ')) : 0;
-		n--;
+		_putchar((n / 10) + '0');
+		_putchar((n % 10) + '0');
 	}
 
 	_putchar('\n');
