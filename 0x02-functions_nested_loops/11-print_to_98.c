@@ -31,10 +31,29 @@ void print_to_98(int n)
 		n++;
 	}
 
+	while (n > 99)
+	{
+		_putchar((n / 100) + '0');
+		_putchar((n / 10 % 10) + '0');
+		_putchar((n % 10) + '0');
+		n != 98 ? (_putchar(','), _putchar(' ')) : 0;
+		n--;
+	}
+
 	if (n == 98)
 	{
 		_putchar((n / 10) + '0');
 		_putchar((n % 10) + '0');
+	}
+
+	while (n >= -111)
+	{
+		_putchar(n <= -100 ? '-' : (n / 100) * -1 + '0');
+		_putchar(n <= -100 ? ((n / 10 % 10) * -1) + '0' :
+		((n / 10) % 10) * -1 + '0');
+		_putchar((n % 10) * -1 + '0');
+		n != 98 ? (_putchar(','), _putchar(' ')) : 0;
+		n++;
 	}
 
 	_putchar('\n');
