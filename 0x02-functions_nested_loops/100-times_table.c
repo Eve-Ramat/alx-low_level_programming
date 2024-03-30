@@ -23,7 +23,7 @@ _putchar(',');
 _putchar(' ');
 }
 
-if (product < 10 && column != 0)
+if (product < 10 && column > 0)
 {
 _putchar(' ');
 _putchar(' ');
