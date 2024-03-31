@@ -16,7 +16,7 @@ thirdNum = firstNum + secondNum;
 firstNum = secondNum;
 secondNum = thirdNum;
 
-printf("%d", thirdNum);
+printf("%ld", thirdNum);
 
 if (number != 50)
 {
