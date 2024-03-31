@@ -1,27 +1,28 @@
 #include <stdio.h>
+
 /**
-  * main - print the first 50 fibonacci numbers.
-  * Return: Nothing.
-  */
+ * main - Entry point
+ * Return: 0
+ */
 
 int main(void)
 {
-	int count;
-	long  i = 0, j = 1, k;
+int number = 1, firstNum = 0, secondNum = 1, thirdNum;
 
-	for (count = 1; count <= 50; count++)
-	{
-		k = i + j;
-		i = j;
-		j = k;
+while (number <= 50)
+{
+thirdNum = firstNum + secondNum;
+firstNum = secondNum;
+secondNum = thirdNum;
 
-		printf("%ld", k);
+printf("%d", thirdNum);
 
-		if (count != 50)
-			printf(", ");
-		else
-			putchar(10);
-	}
-
-	return (0);
+if (number != 50)
+{
+printf(", ");
+}
+number++;
+}
+printf("\n");
+return (0);
 }
