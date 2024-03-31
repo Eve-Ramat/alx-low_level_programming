@@ -1,26 +1,45 @@
 #include <stdio.h>
 
 /**
- * main - print the first 98 Fibonacci numbers without decimal places.
- * Return: Nothing.
+ * main - Entry point
+ * Return: 0
  */
 int main(void)
 {
-	int count;
+int number = 1;
+unsigned long firstNum = 0, secondNum = 1, thirdNum;
+unsigned long m = 0, n = 1, p, carry = 0;
 
-	long double i, j, k;
+while (number <= 97)
+{
+thirdNum = firstNum + secondNum;
+firstNum = secondNum;
+secondNum = thirdNum;
 
-	i = 0;
-	j = 1;
+printf("%ld", thirdNum);
 
-	for (count = 1; count <= 98; count++)
-	{
-		k = i + j;
-		i = j;
-		j = k;
-		printf("%.0Lf, ", k);
-	}
+if (number == 98)
+{
+carry = (m + n) / 1000;
+p = (m + n) - carry * 1000;
+thirdNum = (firstNum + secondNum) + carry;
+m = n;
+n = p;
+firstNum = secondNum;
+secondNum = thirdNum;
 
-	return (0);
+if (p >= 100)
+printf("%lu%lu", thirdNum, p);
+else
+printf("%lu0%lu", thirdNum, p);
+}
+
+if (number != 98)
+printf(", ");
+
+number++;
+}
+printf("\n");
+return (0);
 }
 
