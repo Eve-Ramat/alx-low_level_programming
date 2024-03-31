@@ -7,7 +7,8 @@
 
 int main(void)
 {
-int number = 1, firstNum = 0, secondNum = 1, thirdNum;
+int number = 1;
+long firstNum = 0, secondNum = 1, thirdNum;
 
 while (number <= 50)
 {
