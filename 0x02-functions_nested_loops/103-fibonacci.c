@@ -2,26 +2,31 @@
 
 /**
  * main - Entry point
- * Return: 0
+ *
+ * Description:
+ *	Calculates the sum of even Fibonacci numbers
+ *	up to 4,000,000 and prints the result.
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-int number = 1, sum = 0;
-long firstNum = 0, secondNum = 1, thirdNum;
+	int sum = 0;
+	long firstNum = 0, secondNum = 1, thirdNum;
 
-while (number <= 50)
-{
-thirdNum = firstNum + secondNum;
-firstNum = secondNum;
-secondNum = thirdNum;
-number++;
+	while (thirdNum <= 4000000)
+	{
+		thirdNum = firstNum + secondNum;
+		firstNum = secondNum;
+		secondNum = thirdNum;
 
-if (thirdNum % 2 == 0 && thirdNum <= 4000000)
-{
-sum += thirdNum;
+		if (thirdNum % 2 == 0)
+		{
+			sum += thirdNum;
+		}
+	}
+
+	printf("%d\n", sum);
+	return (0);
 }
-}
-printf("%d\n", sum);
-return (0);
-}
+
