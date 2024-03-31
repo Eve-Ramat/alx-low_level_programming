@@ -1,45 +1,46 @@
 #include <stdio.h>
+
 /**
-  * main - print the first 98 fibonacci numbers.
-  * Return: Nothing.
-  */
-int main(void)
-{
+ * main - Entry point, prints the first 98 Fibonacci numbers.
+ * Return: Always 0 (Success).
+ */
+int main(void) {
 	int count;
-	unsigned long i, j, k;
-	unsigned long m, n, p, carry;
+	unsigned long current, next, sum;
+	unsigned long currentPart, nextPart, sumPart, carry;
 
-	i = 0;
-	j = 1;
+	current = 0;
+	next = 1;
 
-	for (count = 1; count <= 91; count++)
-	{
-		k = i + j;
-		i = j;
-		j = k;
-		printf("%lu, ", k);
+	for (count = 1; count <= 91; count++) {
+		sum = current + next;
+		current = next;
+		next = sum;
+		printf("%lu, ", sum);
 	}
-	m = i % 1000;
-	i = i / 1000;
-	n = j % 1000;
-	j = j / 1000;
-	while (count <= 98)
-	{
-		carry = (m + n) / 1000;
-		p = (m + n) - carry * 1000;
-		k = (i + j) + carry;
-		m = n;
-		n = p;
-		i = j;
-		j = k;
-		if (p >= 100)
-			printf("%lu%lu", k, p);
+
+	currentPart = current % 1000;
+	current = current / 1000;
+	nextPart = next % 1000;
+	next = next / 1000;
+	while (count <= 98) {
+		carry = (currentPart + nextPart) / 1000;
+		sumPart = (currentPart + nextPart) - carry * 1000;
+		sum = (current + next) + carry;
+		currentPart = nextPart;
+		nextPart = sumPart;
+		current = next;
+		next = sum;
+		if (sumPart >= 100)
+			printf("%lu%lu", sum, sumPart);
 		else
-			printf("%lu0%lu", k, p);
+			printf("%lu0%lu", sum, sumPart);
 		if (count != 98)
 			printf(", ");
 		count++;
 	}
+
 	putchar('\n');
 	return (0);
 }
+
