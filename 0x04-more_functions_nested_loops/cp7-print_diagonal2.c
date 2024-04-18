@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_diagonal - Prints a diagonal line on the terminal.
- * @n: The number of times the character '\' should be printed.
+ * print_diagonal - prints a diagonal line on the terminal
+ * @n: number of times the character '\' should be printed
+ *
+ * Return: nothing
  */
-
 void print_diagonal(int n)
 {
 	if (n <= 0)
@@ -15,11 +16,11 @@ void print_diagonal(int n)
 	{
 		int slashes, spaces;
 
-		for (slashes = 1; slashes <= n; slashes++)
+		for (spaces = 0; spaces < n; spaces++)
 		{
-			for (spaces = 1; spaces < slashes; spaces++)
+			for (slashes = 0; slashes < spaces; slashes++)
 			{
-				_putchar(32);
+				_putchar(' ');
 			}
 
 			_putchar('\\');
