@@ -6,6 +6,7 @@
  *
  * Return: nothing
  */
+
 void print_diagonal(int n)
 {
 	if (n <= 0)
@@ -14,14 +15,15 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		int i, spaces;
+		int slashes, spaces;
 
-		for (i = 0; i < n; i++)
+		for (slashes = 0; slashes < n; slashes++)
 		{
-			for (spaces = 0; spaces < i; spaces++)
+			for (spaces = 0; spaces < slashes; spaces++)
 			{
-				_putchar(' ');
+				_putchar(32);
 			}
+
 			_putchar('\\');
 			_putchar('\n');
 		}
