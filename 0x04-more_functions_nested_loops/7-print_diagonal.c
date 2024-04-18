@@ -17,7 +17,7 @@ void print_diagonal(int n)
 	{
 		int slashes, spaces;
 
-		for (slashes = 1; slashes <= n; slashes++)
+		for (slashes = 0; slashes < n; slashes++)
 		{
 			for (spaces = 0; spaces < slashes; spaces++)
 			{
