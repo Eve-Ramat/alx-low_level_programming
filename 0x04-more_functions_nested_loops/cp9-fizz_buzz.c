@@ -1,41 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - prints the numbers from 1 to 100 followed by a new line
- * for multiples of 3 print Fizz
- * for multiples of 5 print Buzz
- * for multipes of 3 and 5 print FizzBuzz
+ * main - Entry point
  *
- * Return: returns 0
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-int i;
+	int number;
 
-for (i = 1; i <= 100; i++)
-{
-if (i % 5 == 0 && i % 3 == 0)
-{
-printf("%s", "FizzBuzz");
+	for (number = 1; number <= 100; number++)
+	{
+		if (number % 3 == 0 && number % 5 == 0)
+			printf("FizzBuzz");
+		else if (number % 3 == 0)
+			printf("Fizz");
+		else if (number % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", number);
+
+		if (number != 100)
+			putchar(32);
+	}
+
+	printf("\n");
+
+	return (0);
 }
-else if (i % 3 == 0)
-{
-printf("%s", "Fizz");
-}
-else if (i % 5 == 0)
-{
-printf("%s", "Buzz");
-}
-else
-{
-printf("%d", i);
-}
-if (i != 100)
-{
-printf(" ");
-}
-}
-printf("\n");
-return (0);
-}
+
