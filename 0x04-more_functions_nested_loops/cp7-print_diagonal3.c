@@ -4,9 +4,14 @@
  * print_diagonal - Prints a diagonal line on the terminal.
  * @n: The number of times the character '\' should be printed.
  */
+
 void print_diagonal(int n)
 {
-	if (n > 0)
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
 	{
 		int slashes, spaces;
 
@@ -20,10 +25,6 @@ void print_diagonal(int n)
 			_putchar('\\');
 			_putchar('\n');
 		}
-	}
-	else
-	{
-		_putchar('\n');
 	}
 }
 
