@@ -6,7 +6,11 @@
  */
 void print_square(int size)
 {
-	if (size > 0)
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
+	else
 	{
 		int row, col;	/* Declare row and col outside the for loop */
 
@@ -18,8 +22,6 @@ void print_square(int size)
 			}
 			_putchar('\n');
 		}
-	else
-		_putchar('\n');
 	}
 }
 
